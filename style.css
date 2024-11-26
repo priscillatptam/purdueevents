@@ -1,0 +1,312 @@
+/*css reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* General */
+body {
+    font-family: 'Acumin Pro', sans-serif !important;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    background-color: #cfb991;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #cfb991;  
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: 60px;
+    overflow: hidden; 
+}
+
+.banner {
+    height: 300px; 
+    object-fit: cover;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.event-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Nav Menu - Full Width */
+nav ul {
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;  
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Active Link */
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: #555960; 
+    color: #fff;
+}
+
+/* Search Icon */
+.nav-item i {
+    font-size: 18px;
+    color: #555960;  
+    padding: 15px;
+}
+
+.nav-item i:active,
+.nav-item i:hover {
+    color:#fff;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    color: #555960;  
+    cursor: pointer;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.welcome-text h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.welcome-text button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #555960;  
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.welcome-text button:hover {
+    transform: scale(1.1);
+}
+
+/* Content Section */
+.content {
+    background-color: #cfb991;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 15px;
+}
+
+.box1 {
+    width: 48%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.box3 {
+    width: 48%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align:center;
+}
+
+.venue-img {
+    width:100%;
+    height:200px;
+    object-fit: cover;
+    border-radius:10px;
+    margin: 0;
+    padding: 0;
+    margin-bottom:10px;
+}
+
+.button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #555960;  
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+         
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+.box2 {
+    width:100%;
+    /*margin:0 auto;*/
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.box iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+/* Google Maps and Calendar */
+.map iframe,
+.calendar iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 10px;
+    border: 0;
+}
+
+/* Modal */
+
+.modal-content {
+    background-color: #cfb991 !important;
+    border: none; 
+}
+
+.btn-close {
+    background-color: #cfb991; 
+    filter: brightness(0.8); 
+    border: none; 
+}
+.btn-close:hover {
+    filter: brightness(1); 
+}
+
+
+
+
+/* Media Query for Small Screens */
+@media (max-width: 900px) {
+    .content {
+        flex-direction: column;
+        align-items:center;
+    }
+    .show {
+        display: flex !important;  
+    }
+
+    .box1 {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .box2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .box3 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        position: absolute;
+        width: 100vw;
+        top: 60px;
+        left: 0;
+        background-color: #f5f5f5; 
+        display: none;
+        flex-direction: column;  
+        z-index: 999;
+    }
+
+    nav ul li {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li:hover {
+        background-color: #555960;
+        cursor: pointer;
+    }
+
+    nav ul li :hover a{
+        color: #fff;
+    }
+
+    nav ul li a{
+        display:block;
+        width: 100%;
+        padding: 20px 0;
+        text-decoration: none;
+        color: #333;
+    }
+
+    .hamburger {
+        display: block;  
+    }
+
+    .show-menu {
+        display: flex !important;  
+    }
+
+    
+}
